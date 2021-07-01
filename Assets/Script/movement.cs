@@ -13,8 +13,10 @@ public class movement : MonoBehaviour
     // Start is called before the first frame update
 
     private Rigidbody2D _rigidBody;
+    private Animator animationController;
     void Start()
     {
+        animationController=GetComponent<Animator>();
         _rigidBody = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
     }
@@ -34,15 +36,28 @@ public class movement : MonoBehaviour
         {
             _rigidBody.velocity = new Vector2(-speed, _rigidBody.velocity.y);
             sprite.flipX = true;
+            if(isGrounded)
+            {
+                animationController.Play("run");
+            }
         }
         else if(Input.GetKey("d") || Input.GetKey("right"))
         {
             _rigidBody.velocity = new Vector2(speed, _rigidBody.velocity.y);
             sprite.flipX = false;
+            if(isGrounded)
+            {
+                animationController.Play("run");
+            }
+        }
+        else{
+            if(isGrounded)
+                animationController.Play("idle");
         }
         if(Input.GetKey("space") && isGrounded)
         {
             _rigidBody.velocity = new Vector2(_rigidBody.velocity.x, jumpForce);
+            animationController.Play("jump");
         }
     }
 
