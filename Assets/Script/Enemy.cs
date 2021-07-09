@@ -24,7 +24,9 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy die!");
+        //GetComponent<SpriteRenderer>().sprite = null;
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+        Destroy(gameObject);
     }
 }

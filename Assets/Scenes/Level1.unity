@@ -19836,7 +19836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472614341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.639744, y: 2.0393915, z: -29.700003}
+  m_LocalPosition: {x: -40.320988, y: 2.0393915, z: -29.700003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 466967057}
@@ -19955,7 +19955,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.639744, y: 2.0393915, z: -29.700003}
+  m_LocalPosition: {x: -40.320988, y: 2.0393915, z: -29.700003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29198,6 +29198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liveRemaining: 3
+  animator: {fileID: 1655240407}
 --- !u!114 &1655240402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29400,6 +29401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1655240407}
+  fireballPrefab: {fileID: 6737780558285910996, guid: 53f4a1fb4023034429ee74f35556529a, type: 3}
   attackingPoint: {fileID: 761218521}
   enemyLayers:
     serializedVersion: 2
@@ -29407,6 +29409,7 @@ MonoBehaviour:
   attackDamage: 40
   attackRange: 0.82
   attackRate: 2
+  fireForce: 20
 --- !u!1 &1755713527
 GameObject:
   m_ObjectHideFlags: 0
