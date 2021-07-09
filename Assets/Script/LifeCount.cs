@@ -15,7 +15,7 @@ public class LifeCount : MonoBehaviour
         lives[liveRemaining].enabled = false;
         if(liveRemaining == 0)
         {
-            FindObjectOfType<movement>().dead();
+            FindObjectOfType<PlayerMovement>().dead();
         }
     }
     private void Update()
