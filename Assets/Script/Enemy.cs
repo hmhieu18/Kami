@@ -29,4 +29,10 @@ public class Enemy : MonoBehaviour
         this.enabled = false;
         Destroy(gameObject);
     }
+    public bool isDead()
+    {
+        if (currentHeath <= 0)
+            return true;
+        return false;
+    }
 }

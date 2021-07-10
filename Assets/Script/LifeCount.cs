@@ -8,15 +8,20 @@ public class LifeCount : MonoBehaviour
     //public Image[] lives;
     public int liveRemaining;
     public Animator animator;
+    private void Start() {
+        UIManager.UpdateLivesUI(liveRemaining);
+    }
 
     public void LoseLife()
     {
         animator.SetTrigger("death");
         liveRemaining--;
+        UIManager.UpdateLivesUI(liveRemaining);
         //lives[liveRemaining].enabled = false;
         if(liveRemaining == 0)
         {
-            FindObjectOfType<PlayerMovement>().dead();
+            GameManager.PlayerDied();
+            // FindObjectOfType<PlayerMovement>().dead();
         }
     }
     private void Update()
