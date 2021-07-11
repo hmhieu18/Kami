@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3906570704123432867}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.456512, y: -4.696961, z: 667.6543}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
@@ -118,9 +118,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09, y: -0.095}
+  m_Offset: {x: -0.0043061576, y: -0.004062603}
   serializedVersion: 2
-  m_Radius: 0.095
+  m_Radius: 0.078159966
 --- !u!114 &3906570704123432878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf23976557924dc086cb0bfb6df8bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionVFXPrefab: {fileID: 1305675960232650, guid: 1e4ec98ba4bb0244292ae6c0c26be7f4, type: 3}
+  explosionVFXPrefab: {fileID: 8451586178558896677, guid: f4693f35ba167cc459bf1bbac5d17794, type: 3}

@@ -13,6 +13,7 @@ public class Skeleton : MonoBehaviour
     public Transform platform;
     int goalPoint = 0;
     public float moveSpeed = 2;
+    public bool isFacingLeft = false;
 
     private void Update()
     {
@@ -34,6 +35,15 @@ public class Skeleton : MonoBehaviour
                 goalPoint = 0;
             else
                 goalPoint++;
+        }
+
+        if (platform.position.x < points[goalPoint].position.x && !isFacingLeft)
+        {
+            Flip();
+        }
+        else if (platform.position.x > points[goalPoint].position.x && isFacingLeft)
+        {
+            Flip();
         }
     }
 
@@ -62,5 +72,15 @@ public class Skeleton : MonoBehaviour
                 anim.SetTrigger(openParameterID);
             }
         // AudioManager.PlayDoorOpenAudio();
+    }
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        isFacingLeft = !isFacingLeft;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale =  platform.localScale;
+        theScale.x *= -1;
+        platform.localScale = theScale;
     }
 }

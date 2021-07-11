@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnLanding()
     {
+        // Debug.Log("Landed");
         animator.SetBool("IsJumping", false);
     }
 
@@ -77,4 +78,15 @@ public class PlayerMovement : MonoBehaviour
         isDead = true;
         FindObjectOfType<LevelSetup>().Restart();
     }
+    public void StepAudio()
+	{
+		//Tell the Audio Manager to play a footstep sound
+		AudioManager.PlayFootstepAudio();
+	}
+
+    public void HurtAudio()
+	{
+		//Tell the Audio Manager to play a hurt sound
+		AudioManager.PlayDeathAudio();
+	}
 }

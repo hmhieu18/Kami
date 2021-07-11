@@ -28,7 +28,12 @@ public class Fireball : MonoBehaviour
         if (hittedEnnemy != null)
         {
             hittedEnnemy.TakeDamage(damage);
+            if(hittedEnnemy.GetType()==typeof(Boss))
+            {
+                Debug.Log("REDUCE BAR");
+                // hittedEnnemy.reduceBar();
+                FindObjectOfType<Boss>().reduceBar();
+            }
         }
-
     }
 }

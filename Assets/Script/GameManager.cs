@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
 	//one in existence. This is often referred to as a "singleton" design pattern. Other
 	static GameManager current;
 
+	public RectTransform UICoin;
 	public float deathSequenceDuration = 1.5f;	//How long player death takes before restarting
+	// public Transform UICoin;
 
 	List<Coin> coins;								//The collection of scene coins
 	Door lockedDoor;							//The scene door
@@ -104,6 +106,9 @@ public class GameManager : MonoBehaviour
 		//If there is no current Game Manager, exit
 		if (current == null)
 			return;
+
+        // coin.FlyToDest(current.UICoin);
+		// coin.FlyToDest(UICoin);
 		current.numberOfCollectedCoins++;
 		//If the coins collection doesn't have this coin, exit
 		if (!current.coins.Contains(coin))
@@ -115,7 +120,7 @@ public class GameManager : MonoBehaviour
 		//If there are no more coins, tell the door to open
 		if (current.coins.Count == 0)
 			current.lockedDoor.Open();
-
+		
 		//Tell the UIManager to update the coin text
 		UIManager.UpdateCoinUI(current.numberOfCollectedCoins);
 	}
@@ -137,7 +142,10 @@ public class GameManager : MonoBehaviour
 		//Invoke the RestartScene() method after a delay
 		current.Invoke("RestartScene", current.deathSequenceDuration);
 	}
-
+	public static RectTransform getUICoin()
+	{
+		return current.UICoin;
+	}
 	public static void PlayerWon()
 	{
 		//If there is no current Game Manager, exit

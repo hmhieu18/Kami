@@ -27,7 +27,7 @@ public class PlayerCombat : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X) && isGrounded)
             {
                 Attack();
-                nextAttackTime = Time.time +0.2f;
+                nextAttackTime = Time.time + 0.2f;
             }
             else if (Input.GetKeyDown(KeyCode.C))
             {
@@ -42,9 +42,14 @@ public class PlayerCombat : MonoBehaviour
         animator.SetTrigger("attacking");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackingPoint.position, attackRange, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
+        foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            if(enemy.GetComponent<Boss>()!=null)
+            {
+                Debug.Log("REDUCE BAR");
+                enemy.GetComponent<Boss>().reduceBar();
+            }
         }
     }
 
@@ -69,7 +74,7 @@ public class PlayerCombat : MonoBehaviour
         {
             return;
         }
-        Gizmos.DrawWireSphere(attackingPoint.position, attackRange); 
+        Gizmos.DrawWireSphere(attackingPoint.position, attackRange);
     }
 
 }

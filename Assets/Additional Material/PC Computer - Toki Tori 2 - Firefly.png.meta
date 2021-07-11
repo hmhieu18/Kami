@@ -178,13 +178,13 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 199
-        width: 18
-        height: 19
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 2, z: 0, w: 1}
+        x: 10
+        y: 191
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -199,12 +199,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_1
       rect:
         serializedVersion: 2
-        x: 87
-        y: 201
-        width: 21
-        height: 11
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 75
+        y: 191
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,12 +220,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_2
       rect:
         serializedVersion: 2
-        x: 153
-        y: 195
-        width: 21
-        height: 12
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 140
+        y: 191
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_3
       rect:
         serializedVersion: 2
-        x: 217
-        y: 192
-        width: 21
-        height: 12
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 205
+        y: 191
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_4
       rect:
         serializedVersion: 2
-        x: 284
-        y: 190
-        width: 19
-        height: 14
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 270
+        y: 191
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -283,12 +283,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_5
       rect:
         serializedVersion: 2
-        x: 347
-        y: 192
-        width: 22
-        height: 13
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 335
+        y: 191
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,12 +304,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_6
       rect:
         serializedVersion: 2
-        x: 413
-        y: 195
-        width: 21
-        height: 12
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 400
+        y: 191
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -325,12 +325,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_7
       rect:
         serializedVersion: 2
-        x: 476
-        y: 201
-        width: 22
-        height: 11
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 465
+        y: 191
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -346,12 +346,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_8
       rect:
         serializedVersion: 2
-        x: 30
-        y: 107
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 0
+        y: 115.66667
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -367,12 +367,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_9
       rect:
         serializedVersion: 2
-        x: 91
-        y: 107
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 65
+        y: 115.66667
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -388,12 +388,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_10
       rect:
         serializedVersion: 2
-        x: 152
-        y: 107
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 130
+        y: 115.66667
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -409,12 +409,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_11
       rect:
         serializedVersion: 2
-        x: 213
-        y: 107
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 195
+        y: 115.66667
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,12 +430,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_12
       rect:
         serializedVersion: 2
-        x: 274
-        y: 107
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 260
+        y: 115.66667
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -451,12 +451,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_13
       rect:
         serializedVersion: 2
-        x: 335
-        y: 107
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 325
+        y: 115.66667
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -472,12 +472,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_14
       rect:
         serializedVersion: 2
-        x: 396
-        y: 107
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 390
+        y: 115.66667
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -493,12 +493,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_15
       rect:
         serializedVersion: 2
-        x: 457
-        y: 107
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 455
+        y: 115.66667
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -514,12 +514,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_16
       rect:
         serializedVersion: 2
-        x: 30
-        y: 25
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 0
+        y: 40.666668
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -535,12 +535,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_17
       rect:
         serializedVersion: 2
-        x: 91
-        y: 25
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 65
+        y: 40.666668
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -556,12 +556,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_18
       rect:
         serializedVersion: 2
-        x: 152
-        y: 25
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 130
+        y: 40.666668
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -577,12 +577,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_19
       rect:
         serializedVersion: 2
-        x: 213
-        y: 25
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 195
+        y: 40.666668
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -598,12 +598,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_20
       rect:
         serializedVersion: 2
-        x: 274
-        y: 25
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 260
+        y: 40.666668
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -619,12 +619,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_21
       rect:
         serializedVersion: 2
-        x: 335
-        y: 25
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 325
+        y: 40.666668
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -640,12 +640,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_22
       rect:
         serializedVersion: 2
-        x: 396
-        y: 25
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 390
+        y: 40.666668
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -661,12 +661,12 @@ TextureImporter:
       name: PC Computer - Toki Tori 2 - Firefly_23
       rect:
         serializedVersion: 2
-        x: 457
-        y: 25
-        width: 51.375
-        height: 57
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 455
+        y: 40.666668
+        width: 45.125
+        height: 35.333332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

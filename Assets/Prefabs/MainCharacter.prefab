@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2751006365233895578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1695307721098645907}
+  m_Layer: 0
+  m_Name: GroundCheck (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1695307721098645907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751006365233895578}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.189, y: -0.321, z: 0.088266745}
+  m_LocalScale: {x: 6.3918185, y: 6.3918185, z: 6.3918185}
+  m_Children: []
+  m_Father: {fileID: 5913864916800451768}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2793079576888153089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4844628601377220537}
+  m_Layer: 0
+  m_Name: GroundCheck (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4844628601377220537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2793079576888153089}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.157, y: -0.322, z: 0.088266745}
+  m_LocalScale: {x: 6.3918185, y: 6.3918185, z: 6.3918185}
+  m_Children: []
+  m_Father: {fileID: 5913864916800451768}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5913864916800451760
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,6 +99,8 @@ Transform:
   - {fileID: 5913864917646415620}
   - {fileID: 5913864918491687584}
   - {fileID: 5913864917621835705}
+  - {fileID: 4844628601377220537}
+  - {fileID: 1695307721098645907}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -168,6 +230,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   m_GroundCheck: {fileID: 5913864917646415620}
+  m_GroundCheck1: {fileID: 4844628601377220537}
+  m_GroundCheck2: {fileID: 1695307721098645907}
   m_CeilingCheck: {fileID: 5913864918491687584}
   m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
