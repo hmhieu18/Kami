@@ -19911,6 +19911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3906570704123432867, guid: 9917c974c02f845a281fad9c2dcdcf56, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9917c974c02f845a281fad9c2dcdcf56, type: 3}
 --- !u!1 &360482010
@@ -19924,7 +19928,7 @@ GameObject:
   - component: {fileID: 360482011}
   m_Layer: 0
   m_Name: Coins
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20267,7 +20271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.195787, y: 10.299392, z: -29.700003}
+  m_LocalPosition: {x: 33.34773, y: 10.299392, z: -29.700003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -23001,7 +23005,7 @@ GameObject:
   - component: {fileID: 821182958}
   - component: {fileID: 821182960}
   - component: {fileID: 821182959}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SkeletonController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28570,7 +28574,7 @@ GameObject:
   - component: {fileID: 1399393964}
   - component: {fileID: 1399393963}
   - component: {fileID: 1399393962}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GatoController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32444,7 +32448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181415585026619455, guid: dea012019dc65402a818b868bf2dade7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.195787
+      value: 33.34773
       objectReference: {fileID: 0}
     - target: {fileID: 3181415585026619455, guid: dea012019dc65402a818b868bf2dade7, type: 3}
       propertyPath: m_LocalPosition.y

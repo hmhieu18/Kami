@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = GetComponent<CharacterController2D>().isGrounded();
+
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -48,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
             nextAttackTime = Time.time + 0.2f;
             //animator.SetTrigger("attacking");
         }
-        isGrounded = GetComponent<CharacterController2D>().isGrounded();
 
         if (Time.time < nextAttackTime && isGrounded)
             horizontalMove = 0;
