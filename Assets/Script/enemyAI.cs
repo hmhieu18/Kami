@@ -6,13 +6,16 @@ public class enemyAI : MonoBehaviour
 {
     
     public float speed;
-    
+    //public bool isBoss = false;
     public List<Transform> points;
     public int nextId = 0;
-    int idChangeValue = 1;
-    private float val;
-    
+    public int idChangeValue = 1;
+    protected float val;
 
+    
+    public int idleTime = 2;
+
+    
     void Start()
     {
         val = transform.localScale.x;
@@ -23,18 +26,9 @@ public class enemyAI : MonoBehaviour
     void Update()
     {
 
-        //float distance = Vector2.Distance(main.position, transform.position);
-        MoveToNext();
         
-        /*
-        if (distance <= rangeSurveil)
-        {
-            chaseMain();
-        }
-        else
-        {
-            stopChase();
-        }*/
+        MoveToNext();
+       
 
     }
     private void Reset()
@@ -42,7 +36,7 @@ public class enemyAI : MonoBehaviour
         init();
     }
     
-    void init()
+    public void init()
     {
         
         GameObject root = new GameObject(name + "Root");
@@ -66,28 +60,7 @@ public class enemyAI : MonoBehaviour
         points.Add(point1.transform);
         points.Add(point2.transform);
     }
-    /*
-    private void chaseMain()
-    {
-        if (transform.position.x < main.position.x)
-        {
-            rg.velocity = new Vector2(speed, rg.velocity.y);
-            transform.localScale = new Vector2(-1, 1);
-        }
-        else if (transform.position.x > main.position.x)
-        {
-            rg.velocity = new Vector2(-speed, rg.velocity.y);
-            transform.localScale = new Vector2(1, 1);
-
-        }
-    }
-
-    private void stopChase()
-    {
-        rg.velocity = new Vector2(0, 0);
-    }
-
-    */
+    
     private void MoveToNext()
     {
         Transform nextPoint = points[nextId];

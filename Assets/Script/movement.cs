@@ -28,10 +28,10 @@ public class movement : MonoBehaviour
     void Update()
     {
         bool isJump = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-        print("groundCheck " + isJump);
+        //print("groundCheck " + isJump);
 
         isJump |= Physics2D.Linecast(transform.position, groundCheck1.position, 1 << LayerMask.NameToLayer("Ground"));
-        print("groundCheck1 " + isJump);
+        //print("groundCheck1 " + isJump);
         isJump |= Physics2D.Linecast(transform.position, groundCheck2.position, 1 << LayerMask.NameToLayer("Ground"));
         //print("groundCheck2 " + isJump);
         if (isJump)
