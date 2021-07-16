@@ -9,8 +9,8 @@ public class enemyAI : MonoBehaviour
     
     public List<Transform> points;
     public int nextId = 0;
-    int idChangeValue = 1;
-    private float val;
+    protected int idChangeValue = 1;
+    protected float val;
     
 
     void Start()

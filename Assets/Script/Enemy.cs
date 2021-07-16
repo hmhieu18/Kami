@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    Animator anim;          //Reference to the Animator component
-    int deadParameterID;	//The ID of the animator parameter that opens the door
-    public int maxHealth = 100;
-    protected int currentHealth;
+    protected Animator anim;          //Reference to the Animator component
+    protected int deadParameterID;	//The ID of the animator parameter that opens the door
+    public float maxHealth = 100.0f;
+    protected float currentHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -23,20 +23,22 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            StartCoroutine(Die());
+            Die();
         }
     }
 
-    IEnumerator Die()
+    public void Die()
     {
         Debug.Log("Enemy die!");
         //GetComponent<SpriteRenderer>().sprite = null;
+        // if(anim==null)
+        // Debug.Log("NULL ANIMATION");
+        anim.SetTrigger(deadParameterID);        
         GetComponent<Collider2D>().enabled = false;
-        anim.SetTrigger(deadParameterID);
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
         this.enabled = false;
-        Destroy(gameObject);
+        Destroy(gameObject, 1f);
     }
+
     public bool isDead()
     {
         if (currentHealth <= 0)
@@ -46,5 +48,8 @@ public class Enemy : MonoBehaviour
     public void reduceBar()
     {
 
+    }
+    public void PlayRiseSound(){
+        AudioManager.PlaySkeletonRiseAudio();
     }
 }

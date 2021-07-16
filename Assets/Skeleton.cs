@@ -14,7 +14,20 @@ public class Skeleton : MonoBehaviour
     int goalPoint = 0;
     public float moveSpeed = 2;
     public bool isFacingLeft = false;
+    void Start()
+    {
+        Debug.Log("RISING");
+        //Get a reference to the Animator component
+        anim = skeleton.GetComponent<Animator>();
 
+        isRised = false;
+        //Get the integer hash of the "Open" parameter. This is much more efficient
+        //than passing strings into the animator
+        openParameterID = Animator.StringToHash("rise");
+
+        //Register this door with the Game Manager
+        // GameManager.RegisterDoor(this);
+    }
     private void Update()
     {
         if (isRised && skeleton != null)
@@ -47,20 +60,6 @@ public class Skeleton : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        //Get a reference to the Animator component
-        anim = skeleton.GetComponent<Animator>();
-
-        isRised = false;
-        //Get the integer hash of the "Open" parameter. This is much more efficient
-        //than passing strings into the animator
-        openParameterID = Animator.StringToHash("rise");
-
-        //Register this door with the Game Manager
-        // GameManager.RegisterDoor(this);
-    }
-
     public void Rise()
     {
         if (skeleton != null)
@@ -79,7 +78,7 @@ public class Skeleton : MonoBehaviour
         isFacingLeft = !isFacingLeft;
 
         // Multiply the player's x local scale by -1.
-        Vector3 theScale =  platform.localScale;
+        Vector3 theScale = platform.localScale;
         theScale.x *= -1;
         platform.localScale = theScale;
     }

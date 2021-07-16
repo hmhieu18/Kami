@@ -146,8 +146,10 @@ public class GameManager : MonoBehaviour
 	{
 		return current.UICoin;
 	}
+
 	public static void PlayerWon()
 	{
+		Debug.Log("PLAYER WON");
 		//If there is no current Game Manager, exit
 		if (current == null)
 			return;

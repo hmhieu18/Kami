@@ -54,33 +54,42 @@ public class CharacterController2D : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
         Collider2D[] colliders1 = Physics2D.OverlapCircleAll(m_GroundCheck1.position, k_GroundedRadius, m_WhatIsGround);
         Collider2D[] colliders2 = Physics2D.OverlapCircleAll(m_GroundCheck2.position, k_GroundedRadius, m_WhatIsGround);
-        for (int i = 0; i < colliders.Length; i++)
+        foreach (Collider2D c in colliders)
         {
-            if (colliders[i].gameObject != gameObject)
+            if (c.tag == "MovingPlatform")
+                transform.parent = c.transform;
+            if (c.gameObject != gameObject)
             {
                 m_Grounded = true;
                 if (!wasGrounded)
                     OnLandEvent.Invoke();
             }
         }
-        for (int i = 0; i < colliders1.Length; i++)
+
+        foreach (Collider2D c in colliders1)
         {
-            if (colliders1[i].gameObject != gameObject)
+            if (c.tag == "MovingPlatform")
+                transform.parent = c.transform;
+            if (c.gameObject != gameObject)
             {
                 m_Grounded = true;
                 if (!wasGrounded)
                     OnLandEvent.Invoke();
             }
         }
-        for (int i = 0; i < colliders2.Length; i++)
+
+        foreach (Collider2D c in colliders2)
         {
-            if (colliders2[i].gameObject != gameObject)
+            if (c.tag == "MovingPlatform")
+                transform.parent = c.transform;
+            if (c.gameObject != gameObject)
             {
                 m_Grounded = true;
                 if (!wasGrounded)
                     OnLandEvent.Invoke();
             }
         }
+        if (colliders.Length == 0 && colliders1.Length == 0 && colliders2.Length == 0) transform.parent = null;
     }
 
 

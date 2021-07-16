@@ -62,6 +62,7 @@ MonoBehaviour:
   deathVoiceClip: {fileID: 8300000, guid: bfe755c2baac648aaa89f65b7534298f, type: 3}
   orbVoiceClip: {fileID: 8300000, guid: df9a2ecbae44a4f30acf4617630a8ca9, type: 3}
   winVoiceClip: {fileID: 8300000, guid: 023ff095798cc4c679cddfa944a62ed3, type: 3}
+  skeletonVoiceClip: {fileID: 8300000, guid: cf3c767c874dc45fca3d73ae225b809d, type: 3}
   ambientGroup: {fileID: 0}
   musicGroup: {fileID: 0}
   stingGroup: {fileID: 0}

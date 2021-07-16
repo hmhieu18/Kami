@@ -10,4 +10,8 @@ public class SkeletonCheckpoint : MonoBehaviour
 	{
 		skeleton.Rise();
 	}
+    public void RiseSkeleton()
+	{
+		skeleton.Rise();
+	}
 }

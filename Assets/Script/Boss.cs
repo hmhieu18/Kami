@@ -5,19 +5,8 @@ using UnityEngine.UI;
 
 public class Boss : Enemy
 {
-    // // Start is called before the first frame update
-    // void Start()
+    // public void reduceBar()
     // {
-    //     loss = FindObjectOfType<PlayerCombat>().attackDamage;
+    //     UIManager.UpdateHealthBar(currentHealth);
     // }
-
-    // // Update is called once per frame
-    // void Update()
-    // {
-
-    // }
-    public void reduceBar()
-    {
-        UIManager.UpdateHealthBar(currentHealth);
-    }
 }

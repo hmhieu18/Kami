@@ -27,12 +27,15 @@ public class Fireball : MonoBehaviour
         Enemy hittedEnnemy = collision.GetComponent<Enemy>();
         if (hittedEnnemy != null)
         {
-            hittedEnnemy.TakeDamage(damage);
-            if(hittedEnnemy.GetType()==typeof(Boss))
+            if (hittedEnnemy.GetType() == typeof(projectile))
             {
                 Debug.Log("REDUCE BAR");
-                // hittedEnnemy.reduceBar();
-                FindObjectOfType<Boss>().reduceBar();
+                FindObjectOfType<projectile>().TakeDamage(damage);
+                // FindObjectOfType<projectile>().reduceBar();
+            }
+            else
+            {
+                hittedEnnemy.TakeDamage(damage);
             }
         }
     }

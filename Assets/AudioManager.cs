@@ -30,6 +30,7 @@ public class AudioManager : MonoBehaviour
 	public AudioClip deathVoiceClip;	//The player death voice
 	public AudioClip orbVoiceClip;		//The player orb collection voice
 	public AudioClip winVoiceClip;		//The player wins voice
+	public AudioClip skeletonVoiceClip;		//The player wins voice
 
 	[Header("Mixer Groups")]
 	public AudioMixerGroup ambientGroup;//The ambient mixer group
@@ -212,5 +213,19 @@ public class AudioManager : MonoBehaviour
 		//Set the player won sting clip and tell the source to play
 		current.stingSource.clip = current.winStingClip;
         current.stingSource.Play();
+    }
+
+	public static void PlaySkeletonRiseAudio()
+    {
+		//If there is no current AudioManager, exit
+		if (current == null)
+            return;
+
+		//Stop the ambient sound
+        current.ambientSource.Stop();
+
+		//Set the player won voice clip and tell the source to play
+		current.voiceSource.clip = current.skeletonVoiceClip;
+        current.voiceSource.Play();
     }
 }

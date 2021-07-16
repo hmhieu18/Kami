@@ -44,11 +44,15 @@ public class PlayerCombat : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            if(enemy.GetComponent<Boss>()!=null)
+            if (enemy.GetComponent<projectile>() != null)
             {
                 Debug.Log("REDUCE BAR");
-                enemy.GetComponent<Boss>().reduceBar();
+                enemy.GetComponent<projectile>().TakeDamage(attackDamage);
+                // enemy.GetComponent<projectile>().reduceBar();
+            }
+            else
+            {
+                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
             }
         }
     }

@@ -86,9 +86,9 @@ public class UIManager : MonoBehaviour
         //Show the game over text
         current.gameOverText.enabled = true;
     }
-    public static void UpdateHealthBar(int health)
+    public static void UpdateHealthBar(float health)
     {
-        // Debug.Log(health.ToString());
-        current.healthBar.fillAmount = (float) health / 100;
+        Debug.Log(health.ToString());
+        current.healthBar.fillAmount = health;
     }
 }
