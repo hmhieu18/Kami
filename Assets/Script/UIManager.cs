@@ -4,7 +4,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     //This class holds a static reference to itself to ensure that there will only be
@@ -17,7 +17,11 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timeText;        //Text element showing amount of time
     public TextMeshProUGUI deathText;       //Text element showing number or deaths
     public TextMeshProUGUI gameOverText;    //Text element showing the Game Over message
-
+    public static bool GameIsPaused = false;
+    public GameObject pauseMenuUI;
+    [SerializeField] Image pauseIcon;
+    [SerializeField] Image playIcon;
+    public GameObject audio;
 
     void Awake()
     {
@@ -32,6 +36,17 @@ public class UIManager : MonoBehaviour
         //This is the current UIManager and it should persist between scene loads
         current = this;
         DontDestroyOnLoad(gameObject);
+        
+        if (GameIsPaused == false)
+        {
+            pauseIcon.enabled = true;
+            playIcon.enabled = false;
+        }
+        else
+        {
+            pauseIcon.enabled = false;
+            playIcon.enabled = true;
+        }
     }
 
     public static void UpdateCoinUI(int coinCount)
@@ -44,19 +59,19 @@ public class UIManager : MonoBehaviour
         current.coinText.text = coinCount.ToString();
     }
 
-    public static void UpdateTimeUI(float time)
-    {
-        //If there is no current UIManager, exit
-        if (current == null)
-            return;
+    // public static void UpdateTimeUI(float time)
+    // {
+    //     //If there is no current UIManager, exit
+    //     if (current == null)
+    //         return;
 
-        //Take the time and convert it into the number of minutes and seconds
-        int minutes = (int)(time / 60);
-        float seconds = time % 60f;
+    //     //Take the time and convert it into the number of minutes and seconds
+    //     int minutes = (int)(time / 60);
+    //     float seconds = time % 60f;
 
-        //Create the string in the appropriate format for the time
-        current.timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
-    }
+    //     //Create the string in the appropriate format for the time
+    //     current.timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+    // }
 
     // public static void UpdateDeathUI(int deathCount)
     // {
@@ -91,4 +106,66 @@ public class UIManager : MonoBehaviour
         Debug.Log(health.ToString());
         current.healthBar.fillAmount = health;
     }
+
+
+
+
+    public void OnButtonPress()
+    {
+        Debug.Log("PAUSE");
+        if (GameIsPaused == false)
+        {
+            Pause();
+        }
+        else
+        {
+            Resume();
+        }
+        UpdateButtonIcon();
+    }
+
+    private void UpdateButtonIcon()
+    {
+        if (GameIsPaused == false)
+        {
+            pauseIcon.enabled = true;
+            playIcon.enabled = false;
+        }
+        else
+        {
+            pauseIcon.enabled = false;
+            playIcon.enabled = true;
+        }
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+    void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
+
+    public void ShopButton()
+    {
+        SceneManager.LoadScene("Store");
+    }
+
+    public void MapButton()
+    {
+        SceneManager.LoadScene("Level Map");
+        // Destroy(audio);
+        // Destroy(gameOject);
+    }
+
 }

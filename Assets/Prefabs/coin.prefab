@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -576979707
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7282038311665875092, guid: 1fd6511cd37154cddb317b36b1fb1f68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,3 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionVFXPrefab: {fileID: 8451586178558896677, guid: f4693f35ba167cc459bf1bbac5d17794, type: 3}
+  moveSpeed: 10

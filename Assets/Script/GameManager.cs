@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour
 			return;
 
 		//Update the total game time and tell the UI Manager to update
-		totalGameTime += Time.deltaTime;
-		UIManager.UpdateTimeUI(totalGameTime);
+		// totalGameTime += Time.deltaTime;
+		// UIManager.UpdateTimeUI(totalGameTime);
 	}
 
 	public static bool IsGameOver()
