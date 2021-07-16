@@ -709,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2bf828a547425249b7c1d5fe9ada00b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
   coinText: {fileID: 114441306156223594}
   timeText: {fileID: 114820883151200892}
   deathText: {fileID: 114249227049911250}
