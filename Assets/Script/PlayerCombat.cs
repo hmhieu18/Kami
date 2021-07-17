@@ -10,6 +10,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackingPoint;
     public Transform firePoint;
     public LayerMask enemyLayers;
+    public PlayerInput input;
 
     public int attackDamage = 40;
     public float attackRange = 0.5f;
@@ -30,12 +31,12 @@ public class PlayerCombat : MonoBehaviour
         //Debug.Log(isGrounded);
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.X) && isGrounded)
+            if (input.attackPressed && isGrounded)
             {
                 Attack();
                 nextAttackTime = Time.time + 0.2f;
             }
-            else if (Input.GetKeyDown(KeyCode.C))
+            else if (input.firePressed)
             {
                 Shoot();
                 nextAttackTime = Time.time + 0.2f;

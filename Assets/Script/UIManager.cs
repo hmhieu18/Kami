@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image pauseIcon;
     [SerializeField] Image playIcon;
     public GameObject audio;
+    public GameObject uiManager;
+    public GameObject mobileInputUI;
 
     void Awake()
     {
@@ -35,7 +37,7 @@ public class UIManager : MonoBehaviour
 
         //This is the current UIManager and it should persist between scene loads
         current = this;
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
         
         if (GameIsPaused == false)
         {
@@ -164,8 +166,9 @@ public class UIManager : MonoBehaviour
     public void MapButton()
     {
         SceneManager.LoadScene("Level Map");
-        // Destroy(audio);
-        // Destroy(gameOject);
+        Destroy(audio);
+        Destroy(uiManager);
+        Destroy(mobileInputUI);
     }
-
+    
 }

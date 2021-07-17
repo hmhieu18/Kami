@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4367334456233145640}
   m_Layer: 11
   m_Name: SkeletonOfBoss
-  m_TagString: Untagged
+  m_TagString: Traps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
