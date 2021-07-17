@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 815784972317162503}
   - component: {fileID: 2761250685785006873}
   - component: {fileID: -8133343154101936067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CannonBallNoTrace
-  m_TagString: Untagged
+  m_TagString: Traps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

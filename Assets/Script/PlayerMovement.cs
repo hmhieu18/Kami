@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController2D controller;
     public Animator animator;
+    PlayerInput input;
 
     public float runSpeed = 40f;
 
@@ -20,39 +21,43 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
 
 
-
+    private void Start()
+    {
+        input = GetComponent<PlayerInput>();
+    }
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = input.horizontal * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump"))
+        if (input.jumpPressed)
         {
             jump = true;
             animator.SetBool("IsJumping", true);
         }
 
-        if (Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        }
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
+        // if (Input.GetButtonDown("Crouch"))
+        // {
+        //     crouch = true;
+        // }
+        // else if (Input.GetButtonUp("Crouch"))
+        // {
+        //     crouch = false;
+        // }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (input.attackPressed)
         {
             nextAttackTime = Time.time + 0.2f;
             //animator.SetTrigger("attacking");
         }
+
         isGrounded = GetComponent<CharacterController2D>().isGrounded();
 
         if (Time.time < nextAttackTime && isGrounded)
             horizontalMove = 0;
-
+		input.ClearInput();
     }
 
 
@@ -79,14 +84,14 @@ public class PlayerMovement : MonoBehaviour
         FindObjectOfType<LevelSetup>().Restart();
     }
     public void StepAudio()
-	{
-		//Tell the Audio Manager to play a footstep sound
-		AudioManager.PlayFootstepAudio();
-	}
+    {
+        //Tell the Audio Manager to play a footstep sound
+        AudioManager.PlayFootstepAudio();
+    }
 
     public void HurtAudio()
-	{
-		//Tell the Audio Manager to play a hurt sound
-		AudioManager.PlayDeathAudio();
-	}
+    {
+        //Tell the Audio Manager to play a hurt sound
+        AudioManager.PlayDeathAudio();
+    }
 }

@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
     public List<GameObject> levelList;
     void Start()
     {
+        GlobalGameManager.LoadFile();
         if (GlobalGameManager.thisUser.curLevel == 1)
         {
             levelList[0].SetActive(true);

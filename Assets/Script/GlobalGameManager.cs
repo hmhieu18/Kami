@@ -15,6 +15,7 @@ public static class GlobalGameManager
     public static void LoadFile()
     {
         thisUser = DataManager.LoadUserDataFromJson(dir);
+        thisUser.curMaxLives=100;
     }
     public static void UpdateCurLevel(int finishedSceneID)
     {

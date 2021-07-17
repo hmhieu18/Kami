@@ -197,6 +197,8 @@ MonoBehaviour:
   playIcon: {fileID: 9142679218448583033}
   audio: {fileID: 0}
   uiManager: {fileID: 9142679218933416328}
+  mobileInputUI: {fileID: 0}
+  sceneFader: {fileID: 0}
 --- !u!1001 &2939219003097291104
 PrefabInstance:
   m_ObjectHideFlags: 0

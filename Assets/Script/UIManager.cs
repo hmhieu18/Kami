@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image playIcon;
     public GameObject audio;
     public GameObject uiManager;
+    public GameObject mobileInputUI;
 
     void Awake()
     {
@@ -167,5 +168,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Level Map");
         Destroy(audio);
         Destroy(uiManager);
+        Destroy(mobileInputUI);
     }
+    
 }
