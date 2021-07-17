@@ -78,6 +78,8 @@ GameObject:
   - component: {fileID: 5913864916800451769}
   - component: {fileID: 200564295014248900}
   - component: {fileID: 400811183334811800}
+  - component: {fileID: 439535140}
+  - component: {fileID: 43837513}
   m_Layer: 12
   m_Name: MainCharacter
   m_TagString: Player
@@ -284,6 +286,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 2176
+  input: {fileID: 439535140}
   attackDamage: 40
   attackRange: 0.82
   attackRate: 2
@@ -316,6 +319,45 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.07701833}
   m_Size: {x: 0.236865, y: 0.43146452}
   m_Direction: 0
+--- !u!114 &439535140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913864916800451760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047af6409de65134389bd241be5625b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testTouchControlsInEditor: 1
+  verticalDPadThreshold: 0.5
+  thumbstick: {fileID: 0}
+  jumpButton: {fileID: 0}
+  attackButton: {fileID: 0}
+  fireButton: {fileID: 0}
+  horizontal: 0
+  jumpHeld: 0
+  jumpPressed: 0
+  crouchHeld: 0
+  crouchPressed: 0
+  attackHeld: 0
+  attackPressed: 0
+  fireHeld: 0
+  firePressed: 0
+--- !u!114 &43837513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913864916800451760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce23a5cc98cca40caa73a1688d071260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5913864917621835704
 GameObject:
   m_ObjectHideFlags: 0

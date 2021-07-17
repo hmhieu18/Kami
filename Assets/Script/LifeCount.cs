@@ -9,6 +9,7 @@ public class LifeCount : MonoBehaviour
     public int liveRemaining;
     public Animator animator;
     private void Start() {
+        liveRemaining=GlobalGameManager.thisUser.curMaxLives;
         UIManager.UpdateLivesUI(liveRemaining);
     }
 
