@@ -196,6 +196,7 @@ MonoBehaviour:
   pauseIcon: {fileID: 9142679219231360097}
   playIcon: {fileID: 9142679218448583033}
   audio: {fileID: 0}
+  uiManager: {fileID: 9142679218933416328}
 --- !u!1001 &2939219003097291104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,6 +349,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnSpeakerButtonPress
       objectReference: {fileID: 0}
+    - target: {fileID: 5172061873514295940, guid: f9c927c5687d24dc9a7346158c7552cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 883447604}
+    - target: {fileID: 5172061873514295940, guid: f9c927c5687d24dc9a7346158c7552cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5172061874309336337, guid: f9c927c5687d24dc9a7346158c7552cb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -435,6 +444,18 @@ PrefabInstance:
     - target: {fileID: 5172061874309336430, guid: f9c927c5687d24dc9a7346158c7552cb, type: 3}
       propertyPath: m_Name
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172061874309336430, guid: f9c927c5687d24dc9a7346158c7552cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172061874479364704, guid: f9c927c5687d24dc9a7346158c7552cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 883447604}
+    - target: {fileID: 5172061874479364704, guid: f9c927c5687d24dc9a7346158c7552cb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9c927c5687d24dc9a7346158c7552cb, type: 3}

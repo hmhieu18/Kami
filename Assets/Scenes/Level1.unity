@@ -19434,7 +19434,6 @@ GameObject:
   - component: {fileID: 451027541}
   - component: {fileID: 451027544}
   - component: {fileID: 451027547}
-  - component: {fileID: 451027546}
   - component: {fileID: 451027545}
   m_Layer: 11
   m_Name: ghost-halo-1
@@ -19552,24 +19551,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451027540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b4dd403b95fedb4da06c7560722ad7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
---- !u!114 &451027546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451027540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c2da8ecc16f0a44b21740c9a68f6c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &451027547
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19723,7 +19710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.132259, y: 2.3993921, z: -29.700003}
+  m_LocalPosition: {x: -47.498966, y: 2.3993921, z: -29.700003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -30430,7 +30417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181415585026619455, guid: dea012019dc65402a818b868bf2dade7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.132259
+      value: -47.498966
       objectReference: {fileID: 0}
     - target: {fileID: 3181415585026619455, guid: dea012019dc65402a818b868bf2dade7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30905,7 +30892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5913864916800451768, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.03
+      value: -49.6
       objectReference: {fileID: 0}
     - target: {fileID: 5913864916800451768, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
       propertyPath: m_LocalPosition.y
