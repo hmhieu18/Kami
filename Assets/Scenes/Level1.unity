@@ -4917,7 +4917,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153403870}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -19869,7 +19869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.0437374, y: 1.499392, z: -29.700003}
+  m_LocalPosition: {x: -6.727712, y: 1.499392, z: -29.700003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -30744,7 +30744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181415585026619455, guid: dea012019dc65402a818b868bf2dade7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.0437374
+      value: -6.727712
       objectReference: {fileID: 0}
     - target: {fileID: 3181415585026619455, guid: dea012019dc65402a818b868bf2dade7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31306,8 +31306,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5913864916800451769, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
+      propertyPath: laserDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913864916800451769, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
       propertyPath: laserLength
-      value: 40
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5913864916800451769, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
       propertyPath: impactEffect
