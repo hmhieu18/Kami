@@ -8,6 +8,7 @@ public class PlayerCombat : MonoBehaviour
     public Animator animator;
     public GameObject fireballPrefab;
     public Transform attackingPoint;
+    public Transform firePoint;
     public LayerMask enemyLayers;
     public PlayerInput input;
 
@@ -17,6 +18,11 @@ public class PlayerCombat : MonoBehaviour
     float nextAttackTime = 0f;
     public float fireForce = 20f;
     bool isGrounded;
+    public float laserLength = 40;
+    public int laserDamage = 40;
+    public GameObject impactEffect;
+    public LineRenderer lineRenderer;
+
 
     // Update is called once per frame
     void Update()
@@ -34,6 +40,17 @@ public class PlayerCombat : MonoBehaviour
             {
                 Shoot();
                 nextAttackTime = Time.time + 0.2f;
+            }
+            else
+            {
+                if (Input.GetKey(KeyCode.Z))
+                {
+                    Kamehameha();
+                }
+                else if (Input.GetKeyUp(KeyCode.Z))
+                {
+                    lineRenderer.enabled = false;
+                }
             }
         }
     }
@@ -60,14 +77,54 @@ public class PlayerCombat : MonoBehaviour
 
     void Shoot()
     {
-        GameObject fireball = Instantiate(fireballPrefab, attackingPoint.position, attackingPoint.rotation);
+        animator.SetTrigger("shooting");
+        GameObject fireball = Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
         if (transform.localScale.x < 0)
-            rb.AddForce(-attackingPoint.right * fireForce, ForceMode2D.Impulse);
+            rb.AddForce(-firePoint.right * fireForce, ForceMode2D.Impulse);
         else
-            rb.AddForce(attackingPoint.right * fireForce, ForceMode2D.Impulse);
+            rb.AddForce(firePoint.right * fireForce, ForceMode2D.Impulse);
 
         //Instantiate(fireballPrefab, attackingPoint.position, attackingPoint.rotation);
+
+    }
+
+    void Kamehameha()
+    {
+        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
+        GameObject collisonObject = hitInfo.transform.gameObject;
+        bool shootLaser = true;
+        if (collisonObject.tag == "Collectable" || collisonObject.layer == LayerMask.NameToLayer("Controller"))
+        {
+            shootLaser = false;
+        }
+
+        if (collisonObject && shootLaser )
+        {
+            Enemy enemy = hitInfo.transform.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(laserDamage);
+            }
+
+            GameObject effect = Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
+            Destroy(effect, 0.1f);
+
+
+            lineRenderer.SetPosition(0, firePoint.position);
+            lineRenderer.SetPosition(1, hitInfo.point);
+        }
+        else
+        {
+            lineRenderer.SetPosition(0, firePoint.position);
+            if (transform.localScale.x < 0)
+                lineRenderer.SetPosition(1, firePoint.position - firePoint.right * laserLength);
+            else
+                lineRenderer.SetPosition(1, firePoint.position + firePoint.right * laserLength);
+
+        }
+
+        lineRenderer.enabled = true;
 
     }
 
