@@ -453,8 +453,8 @@ MonoBehaviour:
   attackRange: 1
   attackRate: 2
   fireForce: 20
-  laserLength: 40
-  laserDamage: 40
+  laserLength: 25
+  laserDamage: 1
   impactEffect: {fileID: 8451586178558896677, guid: f4693f35ba167cc459bf1bbac5d17794, type: 3}
   lineRenderer: {fileID: 153403871}
 --- !u!114 &200564295014248900
@@ -515,6 +515,7 @@ MonoBehaviour:
   firePressed: 0
   laserHeld: 0
   laserPressed: 0
+  laserUp: 0
 --- !u!114 &43837513
 MonoBehaviour:
   m_ObjectHideFlags: 0

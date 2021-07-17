@@ -37,7 +37,7 @@ public class invulnerable : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 12, true);
         c.a = 0.5f;
         render.material.color = c;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         Physics2D.IgnoreLayerCollision(11, 12, false);
         Physics2D.IgnoreLayerCollision(7, 12, false);
         c.a = 1f;
