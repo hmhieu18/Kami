@@ -31153,6 +31153,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5913864916800451769, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 120301945}
+    - target: {fileID: 5913864916800451769, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913864916800451769, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
+      propertyPath: laserDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913864916800451769, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
+      propertyPath: laserLength
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913864916800451769, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
+      propertyPath: impactEffect
+      value: 
+      objectReference: {fileID: 8451586178558896677, guid: f4693f35ba167cc459bf1bbac5d17794, type: 3}
+    - target: {fileID: 5913864916800451769, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
+      propertyPath: lineRenderer
+      value: 
+      objectReference: {fileID: 153403871}
+    - target: {fileID: 5913864917621835705, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.445
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913864917621835705, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.052
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c25682aa6ff484c50a11f9d9171feda5, type: 3}
 --- !u!1001 &6150150527179928479

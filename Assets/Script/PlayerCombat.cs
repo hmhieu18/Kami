@@ -18,8 +18,8 @@ public class PlayerCombat : MonoBehaviour
     float nextAttackTime = 0f;
     public float fireForce = 20f;
     bool isGrounded;
-    public float laserLength = 40;
-    public int laserDamage = 40;
+    public float laserLength = 25;
+    public int laserDamage = 1;
     public GameObject impactEffect;
     public LineRenderer lineRenderer;
 
@@ -91,50 +91,51 @@ public class PlayerCombat : MonoBehaviour
 
     void Kamehameha()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
-        GameObject collisonObject = hitInfo.transform.gameObject;
-        bool shootLaser = true;
-        // if (collisonObject.tag == "Collectable" || collisonObject.layer == LayerMask.NameToLayer("Controller"))
-        // {
-        //     shootLaser = false;
-        // }
-
-        if (collisonObject)
+        RaycastHit2D[] hitObjects;
+        hitObjects = Physics2D.RaycastAll(firePoint.position, firePoint.right, laserLength);
+        bool shootLaser = false;
+        foreach (RaycastHit2D hitObject in hitObjects)
         {
-            Enemy enemy = hitInfo.transform.GetComponent<Enemy>();
-            if (enemy != null)
+            GameObject collisonObject = hitObject.transform.gameObject;
+            Debug.Log(collisonObject.name);
+            if (collisonObject.tag == "Collectable" || collisonObject.layer == LayerMask.NameToLayer("Controller"))
+                continue;
+            else
             {
-                if (enemy.GetType() == typeof(projectile))
+                Enemy enemy = hitObject.transform.GetComponent<Enemy>();
+                if (enemy != null)
                 {
-                    Debug.Log("REDUCE BAR");
-                    FindObjectOfType<projectile>().TakeDamage(laserDamage);
-                    // FindObjectOfType<projectile>().reduceBar();
+                    if (enemy.GetType() == typeof(projectile))
+                    {
+                        Debug.Log("REDUCE BAR");
+                        FindObjectOfType<projectile>().TakeDamage(laserDamage);
+                        // FindObjectOfType<projectile>().reduceBar();
+                    }
+                    else
+                    {
+                        enemy.TakeDamage(laserDamage);
+                    }
                 }
-                else
-                {
-                    enemy.TakeDamage(laserDamage);
-                }
+
+                GameObject effect = Instantiate(impactEffect, hitObject.point, Quaternion.identity);
+                Destroy(effect, 0.1f);
+
+                lineRenderer.SetPosition(0, firePoint.position);
+                lineRenderer.SetPosition(1, hitObject.point);
+                shootLaser = true;
+                break;
             }
-
-
-            GameObject effect = Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
-            Destroy(effect, 0.1f);
-
-            lineRenderer.SetPosition(0, firePoint.position);
-            lineRenderer.SetPosition(1, hitInfo.point);
         }
-        else
+        if (!shootLaser)
         {
             lineRenderer.SetPosition(0, firePoint.position);
             if (transform.localScale.x < 0)
                 lineRenderer.SetPosition(1, firePoint.position - firePoint.right * laserLength);
             else
                 lineRenderer.SetPosition(1, firePoint.position + firePoint.right * laserLength);
-
         }
 
         lineRenderer.enabled = true;
-
     }
 
 
