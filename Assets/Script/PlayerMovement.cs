@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = GetComponent<CharacterController2D>().isGrounded();
 
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = input.horizontal * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 

@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour
     public TouchButton jumpButton;                  //Reference to jump TouchButton
     public TouchButton attackButton;                  //Reference to jump TouchButton
     public TouchButton fireButton;                  //Reference to jump TouchButton
+    public TouchButton laserButton;                  //Reference to jump TouchButton
 
     [HideInInspector] public float horizontal;      //Float that stores horizontal input
     [HideInInspector] public bool jumpHeld;         //Bool that stores jump pressed
@@ -24,8 +25,12 @@ public class PlayerInput : MonoBehaviour
 
     [HideInInspector] public bool attackHeld;       //Bool that stores crouch pressed
     [HideInInspector] public bool attackPressed;    //Bool that stores crouch held	
-	[HideInInspector] public bool fireHeld;		//Bool that stores crouch pressed
+    [HideInInspector] public bool fireHeld;		//Bool that stores crouch pressed
     [HideInInspector] public bool firePressed;    //Bool that stores crouch held
+    [HideInInspector] public bool laserHeld;		//Bool that stores crouch pressed
+    [HideInInspector] public bool laserPressed;    //Bool that stores crouch held
+    [HideInInspector] public bool laserUp;    //Bool that stores crouch held
+
     bool dPadCrouchPrev;                            //Previous values of touch Thumbstick
     bool readyToClear;                              //Bool used to keep input in sync
 
@@ -67,11 +72,12 @@ public class PlayerInput : MonoBehaviour
         jumpHeld = false;
         crouchPressed = false;
         crouchHeld = false;
-		fireHeld=false;
-		firePressed=false;
-		attackPressed=false;
-		attackHeld=false;
-
+        fireHeld = false;
+        firePressed = false;
+        attackPressed = false;
+        attackHeld = false;
+        laserPressed = false;
+        laserHeld = false;
         readyToClear = false;
     }
 
@@ -87,11 +93,14 @@ public class PlayerInput : MonoBehaviour
         crouchPressed = crouchPressed || Input.GetButtonDown("Crouch");
         crouchHeld = crouchHeld || Input.GetButton("Crouch");
 
-		attackPressed = attackPressed || Input.GetButtonDown("Attack");
+        attackPressed = attackPressed || Input.GetButtonDown("Attack");
         attackHeld = attackHeld || Input.GetButton("Attack");
 
-		firePressed = firePressed || Input.GetButtonDown("Fire");
+        firePressed = firePressed || Input.GetButtonDown("Fire");
         fireHeld = fireHeld || Input.GetButton("Fire");
+
+        laserPressed = laserPressed || Input.GetButtonDown("Laser");
+        laserHeld = laserHeld || Input.GetButton("Laser");
     }
 
     void ProcessTouchInputs()
@@ -110,11 +119,14 @@ public class PlayerInput : MonoBehaviour
         jumpPressed = jumpPressed || jumpButton.GetButtonDown();
         jumpHeld = jumpHeld || jumpButton.GetButton();
 
-		attackPressed = attackPressed || attackButton.GetButtonDown();
+        attackPressed = attackPressed || attackButton.GetButtonDown();
         attackHeld = attackHeld || attackButton.GetButton();
 
-		firePressed = firePressed || fireButton.GetButtonDown();
+        firePressed = firePressed || fireButton.GetButtonDown();
         fireHeld = fireHeld || fireButton.GetButton();
+
+        laserPressed = laserPressed || laserButton.GetButtonDown();
+        laserHeld = laserHeld || laserButton.GetButton();
 
         //Using thumbstick, accumulate crouch input
         bool dPadCrouch = thumbstickInput.y <= -verticalDPadThreshold;

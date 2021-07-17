@@ -240,6 +240,7 @@ public class projectile : Enemy
     {
         UIManager.UpdateHealthBar((currentHealth / maxHealth));
     }
+    
     public void TakeDamage(int damage)
     {
 

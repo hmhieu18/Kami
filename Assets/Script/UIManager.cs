@@ -165,10 +165,10 @@ public class UIManager : MonoBehaviour
 
     public void MapButton()
     {
+        Resume();
         SceneManager.LoadScene("Level Map");
         Destroy(audio);
         Destroy(uiManager);
         Destroy(mobileInputUI);
     }
-    
 }

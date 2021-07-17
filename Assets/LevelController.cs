@@ -14,7 +14,6 @@ public class LevelController : MonoBehaviour
             levelList[0].SetActive(true);
             levelList[1].SetActive(false);
             levelList[2].SetActive(false);
-
         }
         else if (GlobalGameManager.thisUser.curLevel == 2)
         {

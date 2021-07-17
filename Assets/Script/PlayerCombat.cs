@@ -43,11 +43,11 @@ public class PlayerCombat : MonoBehaviour
             }
             else
             {
-                if (Input.GetKey(KeyCode.Z))
+                if (input.laserHeld)
                 {
                     Kamehameha();
                 }
-                else if (Input.GetKeyUp(KeyCode.Z))
+                else
                 {
                     lineRenderer.enabled = false;
                 }
@@ -94,22 +94,31 @@ public class PlayerCombat : MonoBehaviour
         RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
         GameObject collisonObject = hitInfo.transform.gameObject;
         bool shootLaser = true;
-        if (collisonObject.tag == "Collectable" || collisonObject.layer == LayerMask.NameToLayer("Controller"))
-        {
-            shootLaser = false;
-        }
+        // if (collisonObject.tag == "Collectable" || collisonObject.layer == LayerMask.NameToLayer("Controller"))
+        // {
+        //     shootLaser = false;
+        // }
 
-        if (collisonObject && shootLaser )
+        if (collisonObject)
         {
             Enemy enemy = hitInfo.transform.GetComponent<Enemy>();
             if (enemy != null)
             {
-                enemy.TakeDamage(laserDamage);
+                if (enemy.GetType() == typeof(projectile))
+                {
+                    Debug.Log("REDUCE BAR");
+                    FindObjectOfType<projectile>().TakeDamage(laserDamage);
+                    // FindObjectOfType<projectile>().reduceBar();
+                }
+                else
+                {
+                    enemy.TakeDamage(laserDamage);
+                }
             }
+
 
             GameObject effect = Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
             Destroy(effect, 0.1f);
-
 
             lineRenderer.SetPosition(0, firePoint.position);
             lineRenderer.SetPosition(1, hitInfo.point);
