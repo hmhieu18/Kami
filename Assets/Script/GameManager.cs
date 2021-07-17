@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         UIManager.UpdateCoinUI(numberOfCollectedCoins);
 
         //Persis this object between scene reloads
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
     }
 
     void Update()
@@ -157,7 +157,8 @@ public class GameManager : MonoBehaviour
         //The game is now over
         current.isGameOver = true;
         GlobalGameManager.thisUser.numberOfCoins += current.numberOfCollectedCoins;
-        GlobalGameManager.thisUser.curLevel += 1;
+		GlobalGameManager.UpdateCurLevel(SceneManager.GetActiveScene().buildIndex);
+        // GlobalGameManager.thisUser.curLevel = int.MaxValue(SceneManager.GetActiveScene().buildIndex+1, GlobalGameManager.thisUser.curLevel);
         GlobalGameManager.SaveFile();
         //Tell UI Manager to show the game over text and tell the Audio Manager to play
         //game over audio

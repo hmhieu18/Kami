@@ -5,32 +5,42 @@ using UnityEngine.SceneManagement;
 
 public class Navigator : MonoBehaviour
 {
+    public SceneFader sceneFader;
     public void ExitButton() { 
         Application.Quit();
         Debug.Log("Game closed");
     }
 
-    public void ShopButton() { 
-        SceneManager.LoadScene("Store");
+    public void ShopButton() {
+        StartCoroutine(AnimationFadeOutAndLoadScene("Store"));
     }
 
     public void MapButton() { 
-        SceneManager.LoadScene("Level Map");
+        StartCoroutine(AnimationFadeOutAndLoadScene("Level Map"));
     }
 
     public void ToMenu() { 
-        SceneManager.LoadScene("Menu");
+        StartCoroutine(AnimationFadeOutAndLoadScene("Menu"));
     }
 
-    public void ToLevel1() { 
-        SceneManager.LoadScene("Level1");
+    public void ToLevel1() {
+        StartCoroutine(AnimationFadeOutAndLoadScene("Level1"));
     }
 
     public void ToLevel2() { 
-        SceneManager.LoadScene("Level2");
+        StartCoroutine(AnimationFadeOutAndLoadScene("Level2"));
     }
 
     public void ToLevelBoss() { 
-        SceneManager.LoadScene("LevelBoss");
+        StartCoroutine(AnimationFadeOutAndLoadScene("LevelBoss"));
+    }
+    // private void Start() {
+    //  sceneFader.FadeSceneOut();   
+    // }
+    public IEnumerator AnimationFadeOutAndLoadScene(string sceneName)
+    {
+        sceneFader.FadeSceneOut();
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(sceneName);
     }
 }

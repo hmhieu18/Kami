@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public static class GlobalGameManager
 {
     private static string dir = Application.persistentDataPath + "/UserData.txt";
     public static UserData thisUser = new UserData();
+    private static int level1ID = 3;
     public static void SaveFile()
     {
         DataManager.SaveIntoJson(thisUser, dir);
@@ -13,6 +15,11 @@ public static class GlobalGameManager
     public static void LoadFile()
     {
         thisUser = DataManager.LoadUserDataFromJson(dir);
+    }
+    public static void UpdateCurLevel(int finishedSceneID)
+    {
+        int finishedSceneLevel = finishedSceneID - level1ID + 1;
+        thisUser.curLevel = Math.Max(finishedSceneLevel + 1, thisUser.curLevel);
     }
 }
 [System.Serializable]

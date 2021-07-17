@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
 
         //This is the current UIManager and it should persist between scene loads
         current = this;
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
         
         if (GameIsPaused == false)
         {
@@ -165,7 +165,7 @@ public class UIManager : MonoBehaviour
     public void MapButton()
     {
         SceneManager.LoadScene("Level Map");
-        // Destroy(audio);
-        // Destroy(uiManager);
+        Destroy(audio);
+        Destroy(uiManager);
     }
 }
